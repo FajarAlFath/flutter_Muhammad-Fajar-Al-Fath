@@ -31,7 +31,7 @@ Berikut link Repository tugas:
 https://github.com/FajarAlFath/flutter_practice
 
 Berikut Hasil ScreenShot Repository:
-![hasil](.screenshots/10_setelah di merge di bagian master.png
+![hasil](./screenshots/10_setelah di merge di bagian master.png
 
 
 
