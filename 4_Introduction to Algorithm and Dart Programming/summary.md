@@ -28,7 +28,9 @@ Digunakan untuk mengolah data yang telah disimpan. berikut daftar Operator yang 
 3. Comparison untuk perbandingan data seperti " ==, > ".
 4. Logical untuk kondisi dan logika seperti " ! , && ".
 ### Praktikum
-1. Membuat 
+1. Membuat sebuah program yang dapat menghitung luas lingkaran. Caranya adalah menginisialisasi variable lalu letakkan variable tersebut kedalam rumus luas lingkaran sepert luas = r*r*phi;
+2. Membuat 3 variable string lalu menggabungkannya. Caranya dengan print ('$var1 $var2 $var3');
+
 
 
 
