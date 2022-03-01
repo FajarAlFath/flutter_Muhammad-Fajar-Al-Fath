@@ -11,6 +11,7 @@ faktorial (int f){
 }
 void main() {
   print('===> Program pemfaktoran berbasis input output <===');
+  //input bilangan yang ingin difaktorisasi
   print('input nilai: ');
   int? f = int.parse(stdin.readLineSync()!);
   int hasil = faktorial(f); 
