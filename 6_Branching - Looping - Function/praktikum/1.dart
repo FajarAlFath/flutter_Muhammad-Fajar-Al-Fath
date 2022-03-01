@@ -38,6 +38,10 @@ lulus(String hasil){
 void main(){
   print ('masukkan nilai : ');
   int? n = int.parse(stdin.readLineSync()!);
+
   var hasil = nilai (n);
   print ('nilai anda $hasil');
+
+  var condition = lulus(hasil);
+  print('$condition');
   }
