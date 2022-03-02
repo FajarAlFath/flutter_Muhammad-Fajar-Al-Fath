@@ -31,9 +31,10 @@ Dalam praktikum kali ini telah dikerjakan dua soal dengan problem:
 #### 1. Membuat Branching sederhana dengan mereturn nilai;
 problem ini dapat disolve menggunkana ELSE IF dan mereturn value nya.
 berikut hasil percobaanya:
-<img src =screenshots/ soal no 1.png/>
+<img src = screenshots/1.png/>
 
 #### 2. Membuat Faktorial 10,20 dan 30;
 Problem ini dapat disolve menggunakan perulangan for atau perulangan rekursif.
 berikut hasil percobaannya:
+<img src = screenshots/2.png/>
 
