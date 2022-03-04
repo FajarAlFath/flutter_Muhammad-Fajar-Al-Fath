@@ -1,3 +1,4 @@
+//fungsi future f1
 Future f1(var a, var kali)async{
   Future.delayed(Duration(seconds: 1),(){
     var d = [];
