@@ -12,7 +12,6 @@ void main() {
   for (var i = 0; i <= 2 ; i++) {
     for (var n = 0; i <= 2; i++) {
     asal[initiate[n][i]]=initiate[1][i];
-    print('$n dan $i');
     }
   }
  print('map yang telah dibuat berdasarkan list: $asal');
