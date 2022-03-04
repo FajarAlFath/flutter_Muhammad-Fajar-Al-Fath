@@ -10,9 +10,8 @@ void main() {
 
   var asal = {};
   for (var i = 0; i <= 2 ; i++) {
-    for (var n = 0; i <= 2; i++) {
+    int n = 0;
     asal[initiate[n][i]]=initiate[1][i];
-    }
   }
  print('map yang telah dibuat berdasarkan list: $asal');
  print('\n====================  Selesai  ====================');
