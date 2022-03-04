@@ -1,5 +1,5 @@
 Future f1(var a, var kali)async{
-  await Future.delayed(Duration(seconds: 1),(){
+  Future.delayed(Duration(seconds: 1),(){
     var d = [];
     for (var c in a) {
       var e = c*kali;
