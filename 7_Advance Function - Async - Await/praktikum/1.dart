@@ -7,7 +7,7 @@ Future f1(var a, var kali)async{
       var e = c*kali;
       d.add(e);
     }
-    print(d);
+    print('list setelah dikali $d');
   });
 }
 
@@ -27,6 +27,7 @@ Future f1(var a, var kali)async{
 void main()async{
   print('=============== Soal no 1 ===============');
   var a = [1,2,3,4,5,6,7,8,9,10];
+  print('List awal $a');
   await f1(a, 10);
   
 }
