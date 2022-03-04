@@ -46,7 +46,7 @@ void main()async{
 }
 ```
 ### 3. Data Future
-Merupakan data yang dapat ditunggu dan merupakan bagian dari async.
+Merupakan data yang dapat ditunggu dan merupakan bagian dari async. Pada data Future biasanya terdapat await ataupun delayed.
 ### 4. Collection
 Pada Pemograman dart terdapat dua collection yang sering sekali digunakan yaitu :
 **List**
