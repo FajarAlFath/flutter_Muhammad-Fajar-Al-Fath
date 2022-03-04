@@ -69,11 +69,11 @@ a. Membuat sebuah Advance Function dengan spesifikasi:
 3. tiap perulangan kalikan dengan pengkali.
 4. return list baru.
 #### hasil nya adalah sebagai berikut:
-ss
+<![hasil_1](screenshots/1.png)>
 
 b. Membuat list dengan spesifikasi berikut:
 1. tiap element nya berupa list.
 2. tiap element wajib memiliki 2 sub data.
 3. buatlah sebuah map dari list tersebut!
 #### hasil nya sebagai berikut:
-ss
+![hasil_2](screenshots/2.png)
