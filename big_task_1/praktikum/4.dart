@@ -4,7 +4,7 @@ diagonal (int n){
   for (int i=0;i <= n;i++) {
     for (int b = i; b>=1; b--) {
       if (i == b){
-        print('$i');
+        stdout.writeln('$i');
       }
       else{
         stdout.write(' ');

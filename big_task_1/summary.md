@@ -72,6 +72,8 @@ code:
 ```dart 
 
 ```
+untuk bagian no 3 masih unsolved.
+
 
 # 4 
 - menerima sebuah angka
