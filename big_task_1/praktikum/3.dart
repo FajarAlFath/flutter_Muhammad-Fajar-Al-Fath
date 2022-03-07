@@ -4,21 +4,36 @@ void main(List<String> args) {
   stdout.write('input jumlah ');
   int? n = int.parse(stdin.readLineSync()!);
   jamatas(n);
+  jambawah(n);
   //jambawah(n);
 }
 
-jamatas(int tinggi){
-  for (var a = 1; a <= 5; a++) {
-    for(var b=1;b<=tinggi;b++ ){
-      stdout.write('*');
+jambawah(int tinggi){
+  for (var i = 1; i <= tinggi; i++) {
+    for (var f = i; f <= tinggi; f++) {
+      stdout.write(' ');
     }
-    tinggi--;
+    for (var f = 1; f < i; f++) {
+      stdout.write('o');
+    }
+    for (var f = 1; f <= i; f++) {
+      stdout.write('o');
+    }
     print('');
   }
 }
 
-jambawah(int tinggi){
-  for (var i = tinggi; i >=1; i--) {
-    
+jamatas(int tinggi){
+  for (var i = 1; i <= tinggi; i++) {
+    for (var f = 1; f <= i; f++) {
+      stdout.write(' ');
+    }
+    for (var f = i; f < tinggi; f++) {
+      stdout.write('o');
+    }
+    for (var f = i; f <= tinggi; f++) {
+      stdout.write('o');
+    }
+    print('');
   }
 }
