@@ -1,5 +1,5 @@
 # Resume
-## 7_Advance Function-Async-Await
+## 8_Collection
 Pada Section ini telah dipelajari hal sebagai berikut:
 ### 1. Fungsi Lanjutan
 ### 2. Async-Await
