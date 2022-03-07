@@ -80,18 +80,14 @@ untuk bagian no 3 masih unsolved.
 - menampilkan angka secara diagonal
 
 ```dart 
-import 'dart:io';
+  import 'dart:io';
 
 diagonal (int n){
-  for (int i=0;i <= n;i++) {
-    for (int b = i; b>=1; b--) {
-      if (i == b){
-        print('$i');
-      }
-      else{
-        stdout.write(' ');
-      }
+  for (int i= 1;i <= n;i++) {
+    for (int b = 0; b <= i; b++) {
+      stdout.write(' ');
     }
+    print(i);
   }
 }
 
