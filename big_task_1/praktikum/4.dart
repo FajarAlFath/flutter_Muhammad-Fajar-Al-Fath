@@ -1,15 +1,11 @@
 import 'dart:io';
 
 diagonal (int n){
-  for (int i=0;i <= n;i++) {
-    for (int b = 0; b>=1; b--) {
-      if (i == b){
-        stdout.writeln('$i');
-      }
-      else{
-        stdout.write(' ');
-      }
+  for (int i= 1;i <= n;i++) {
+    for (int b = 0; b <= i; b++) {
+      stdout.write(' ');
     }
+    print(i);
   }
 }
 
