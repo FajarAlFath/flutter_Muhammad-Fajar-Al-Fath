@@ -46,7 +46,7 @@ void main(List<String> args) {
   //inisialisasi property melalui object
   berat_hewan.h0 = 10;
   berat_hewan.h1 = 20;
-  berat_hewan.h2 = 20;
+  berat_hewan.h2 = 90;
 
   //using method tambah to add
   mobil.tambah('anjing', berat_hewan.h0);
