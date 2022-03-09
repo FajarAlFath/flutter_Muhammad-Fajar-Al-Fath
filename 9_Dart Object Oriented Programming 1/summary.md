@@ -49,6 +49,7 @@ class Berat_hewan{
 class Mobil{
   // property berat max dalam kg
   int maxkg = 100;
+  int sisa = 100;
   int temp = 0;
 
   //property list nama;
@@ -56,11 +57,17 @@ class Mobil{
 
   //method tambah muatan
   tambah(String hewan, int berat){
-    if (maxkg != 0){
-      list_hewan.add(hewan);
-      maxkg -= berat;
+    if (temp <= maxkg){
+      temp += berat;
+      if(temp <= maxkg){
+        list_hewan.add(hewan);
+        sisa -= berat;
+      }
+      else{
+        temp -= berat;
+        print ('full capacity');
+      }
     }
-    temp += berat; 
   }
 
   //method total muatan
@@ -77,7 +84,7 @@ void main(List<String> args) {
   //inisialisasi property melalui object
   berat_hewan.h0 = 10;
   berat_hewan.h1 = 20;
-  berat_hewan.h2 = 30;
+  berat_hewan.h2 = 90;
 
   //using method tambah to add
   mobil.tambah('anjing', berat_hewan.h0);
@@ -88,5 +95,6 @@ void main(List<String> args) {
   //using method total to sum
   stdout.write('total kg hewan yang diangkut mobil = ');
   mobil.total();
+  print('sisa kapasitas ${mobil.sisa} kg');
 }
 ```
