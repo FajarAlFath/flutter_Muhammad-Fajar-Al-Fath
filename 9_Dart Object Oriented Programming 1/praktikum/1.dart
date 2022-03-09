@@ -49,5 +49,5 @@ void main(List<String> args) {
 
   //using method total to sum
   stdout.write('total kg hewan yang diangkut mobil = ');
-  print ('${mobil.total()}');
+  mobil.total();
 }
