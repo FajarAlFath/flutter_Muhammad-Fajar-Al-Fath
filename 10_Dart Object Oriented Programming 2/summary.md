@@ -23,4 +23,4 @@ Class Anak extends Manusia{
     }
 }
 ```
-## 2. Poin dua
+## 2. HELLO WORLD
