@@ -7,6 +7,6 @@ class Kubus extends Bangunruang{
   @override
   volume() {
     var hasil = sisi*sisi*sisi;
-    print (hasil);
+    print ('Volume kubus adalah $hasil');
   }
 }

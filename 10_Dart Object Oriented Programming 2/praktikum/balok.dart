@@ -9,6 +9,6 @@ class Balok extends Bangunruang{
   @override
   volume() {
     var hasil = panjang*tinggi*lebar;
-    print(hasil);
+    print('Volume balok adalah $hasil');
   }
 }
