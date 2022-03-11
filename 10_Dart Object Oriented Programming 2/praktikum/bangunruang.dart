@@ -12,6 +12,15 @@ void main(List<String> args) {
   var balok = Balok();
   var kubus = Kubus();
 
-  stdout.write('input sisi');
+  print('input data kubus');
+  stdout.write('input sisi: ');
   kubus.sisi = int.parse(stdin.readLineSync()!);
+
+  print('input data balok');
+  stdout.write('input panjang: ');
+  balok.panjang = int.parse(stdin.readLineSync()!);
+  stdout.write('input lebar: ');
+  balok.lebar = int.parse(stdin.readLineSync()!);
+  stdout.write('input tinggi: ');
+  balok.tinggi = int.parse(stdin.readLineSync()!);
 }
