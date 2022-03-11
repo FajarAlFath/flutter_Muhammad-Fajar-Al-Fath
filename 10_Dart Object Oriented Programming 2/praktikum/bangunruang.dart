@@ -25,6 +25,7 @@ void main(List<String> args) {
   balok.tinggi = int.parse(stdin.readLineSync()!);
 
   //using method volume
+  print('');
   balok.volume();
   kubus.volume();
 }
