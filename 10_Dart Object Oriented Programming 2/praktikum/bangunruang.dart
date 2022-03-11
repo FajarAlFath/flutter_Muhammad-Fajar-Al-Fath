@@ -3,6 +3,10 @@ import 'kubus.dart';
 import 'dart:io';
 
 class Bangunruang{
+  var panjang;
+  var tinggi;
+  var lebar;
+
   volume(){
     print ('Menghitung Volume');
   }
