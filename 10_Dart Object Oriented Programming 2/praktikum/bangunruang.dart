@@ -16,11 +16,15 @@ void main(List<String> args) {
   stdout.write('input sisi: ');
   kubus.sisi = int.parse(stdin.readLineSync()!);
 
-  print('input data balok');
+  print('\ninput data balok');
   stdout.write('input panjang: ');
   balok.panjang = int.parse(stdin.readLineSync()!);
   stdout.write('input lebar: ');
   balok.lebar = int.parse(stdin.readLineSync()!);
   stdout.write('input tinggi: ');
   balok.tinggi = int.parse(stdin.readLineSync()!);
+
+  //using method volume
+  balok.volume();
+  kubus.volume();
 }
