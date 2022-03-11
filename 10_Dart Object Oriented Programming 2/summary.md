@@ -23,4 +23,9 @@ Class Anak extends Manusia{
     }
 }
 ```
-## 2. HELLO WORLD
+## 2. Penggunaan Import
+import digunakan ketika kita mengaplikasikan inheritance, class induk yang dibuat di file berbeda harus diimport agar dapat diakses di file lainnya.
+## 3. Tugas Membuat Class bangunruang dengan method overriding
+pada tugas ini diperintahkan untuk membuat sebuah method volume yang dapat menghitung volume pada class kubus dan balok. Agar code lebih effisien maka dapat digunakan method overriding agar dapat membuat sebuah method yang sama akan tetapi berbeda proses. 
+berikut hasil tugas task 1 yang telah dikerjakan:
+![gambar 1](screenshots/1.png)
