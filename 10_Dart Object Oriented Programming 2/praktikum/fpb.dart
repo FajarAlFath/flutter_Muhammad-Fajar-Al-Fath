@@ -1,14 +1,24 @@
 //faktor persekutuan terbesar (fpb)
-import 'dart:io';
-import 'package:dart_application_1/matematika.dart';
+import 'matematika.dart';
 
-class Fpb extends Matematika{
+class Fpb implements Matematika{
   var x;
   var y;
+  var hasil;
 
   Fpb(){
     this.x;
     this.y;
-  }  
-  
+  }
+
+  @override
+  hitung(x, y) {
+    hasil = x%y;
+    while (hasil!=0) {
+      x=y;
+      y=hasil;
+      hasil=x%y;
+    }
+    return y;
+  } 
 }
