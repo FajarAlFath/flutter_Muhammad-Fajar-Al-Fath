@@ -12,13 +12,18 @@ class Kpk implements Matematika{
   }  
 
   @override
-  hitung(x,y) {
-    for (var i = 1; i <= y; i++) {
-    hasil += x;
-    if(hasil%y==0){
-      return hasil;
+  hitung1(x,y) {
+     while (y!=0) {
+      hasil = x%y;
+      x=y;
+      y=hasil;
     }
+    return x;
+  } 
+
+  @override
+  hitung(x,y){
+    hasil = x*y / hitung1(x, y);
     print(hasil);
-   }    
   }
 }

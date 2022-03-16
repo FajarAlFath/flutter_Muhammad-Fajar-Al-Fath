@@ -8,4 +8,5 @@ void main() {
   var kpk = Kpk();
 
   fpb.hitung(16,24);
+  kpk.hitung(120, 88);
 }
