@@ -13,12 +13,11 @@ class Fpb implements Matematika{
 
   @override
   hitung(x, y) {
-    hasil = x%y;
-    while (hasil!=0) {
+    while (y!=0) {
+      hasil = x%y;
       x=y;
       y=hasil;
-      hasil=x%y;
     }
-    print (y);
+    print(x);
   } 
 }

@@ -7,17 +7,18 @@ class Kpk implements Matematika{
   var hasil;
 
   Kpk(){
-    this.x;
-    this.y;
+    x = 0;
+    y = 0;
   }  
 
   @override
   hitung(x,y) {
     for (var i = 1; i <= y; i++) {
-    hasil+=x;
+    hasil += x;
     if(hasil%y==0){
-      print('kpk = $hasil');
+      return hasil;
     }
+    print(hasil);
    }    
   }
 }
