@@ -1,8 +1,7 @@
 //faktor persekutuan terkecil atau kelipatan persekutuan terkecil(kpk)
-import 'dart:io';
-import 'package:dart_application_1/matematika.dart';
+import 'matematika.dart';
 
-class Kpk extends Matematika{
+class Kpk implements Matematika{
   var x;
   var y;
   Kpk(){
@@ -12,7 +11,6 @@ class Kpk extends Matematika{
 
   @override
   hitung(x,y) {
-    // TODO: implement hitung
     int i;
     if(x > y){
       i = x;
