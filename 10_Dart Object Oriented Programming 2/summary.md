@@ -30,5 +30,6 @@ pada tugas ini diperintahkan untuk membuat sebuah method volume yang dapat mengh
 berikut hasil tugas task 1 yang telah dikerjakan:
 ![gambar 1](screenshots/1.png)
 ## 4. Tugas membuat class fpb dan kpk dengan method implements
+perbedaan implement dengan extends adalah implement mengoverride seluruh method induk.
 berikut hasil dari tugas task 2 yang telah dikerjakan:
 ![gambar 2](screenshots/2.png)
