@@ -4,6 +4,8 @@ import 'matematika.dart';
 class Kpk implements Matematika{
   var x;
   var y;
+  var hasil;
+
   Kpk(){
     this.x;
     this.y;
@@ -11,17 +13,11 @@ class Kpk implements Matematika{
 
   @override
   hitung(x,y) {
-    int i;
-    if(x > y){
-      i = x;
-      x = y;
-      y = i;
+    for (var i = 1; i <= y; i++) {
+    hasil+=x;
+    if(hasil%y==0){
+      print('kpk = $hasil');
     }
-    while(x > 0){
-      i = y % x;
-      y = x;
-      x = i;
-    }
-    return y;
+   }    
   }
 }
