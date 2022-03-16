@@ -8,5 +8,8 @@ void main(List<String> args) {
   var kpk = Kpk();
 
   fpb.hitung(3, 5);
-  fpb.hitung(2, 5);
+  kpk.hitung(2, 5);
+
+  print(kpk);
+  print(fpb);
 }
