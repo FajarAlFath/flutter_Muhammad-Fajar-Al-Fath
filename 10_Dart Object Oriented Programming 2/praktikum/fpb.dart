@@ -19,6 +19,6 @@ class Fpb implements Matematika{
       y=hasil;
       hasil=x%y;
     }
-    return y;
+    print (y);
   } 
 }

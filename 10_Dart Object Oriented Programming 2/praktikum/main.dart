@@ -9,7 +9,5 @@ void main(List<String> args) {
 
   fpb.hitung(3, 5);
   kpk.hitung(2, 5);
-
-  print(kpk);
-  print(fpb);
+  
 }
