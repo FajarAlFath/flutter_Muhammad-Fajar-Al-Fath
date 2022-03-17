@@ -17,6 +17,13 @@ Membuat sebuah jam yang angka nya bisa terus berubah. Kemudian memisahkan Widget
 Code yang digunakan:
 ```dart
 //this program contain the answer from task 1 and task 2 section 11.
+
+import 'dart:async';
+import 'dart:html';
+import 'package:flutter/material.dart';
+import 'dart:core';
+import 'package:intl/intl.dart';
+
 void main() {
   runApp(new MyApp());
 }
@@ -62,5 +69,6 @@ Widget build(BuildContext context) {
   }
 }
 ```
+
 hasil dari code tersebut sebagai berikut:
 ![gambar 1](screenshots/1.png)
