@@ -12,7 +12,7 @@ Widget yang data didalamnya dapat berubah.
 ### 4. Built in Widget
 merupakan Widget yang terdapat didalam class dan dapat langsung digunakan. Contohnya text Widget.
 
-### Soal 
+### 5. Soal 
 Membuat sebuah jam yang angka nya bisa terus berubah. Kemudian memisahkan Widget yang dapat dipisah didalam program flutter tersebut.
 Code yang digunakan:
 ```dart
