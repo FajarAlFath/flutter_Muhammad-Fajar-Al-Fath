@@ -1,15 +1,15 @@
 # 11_Introduction Flutter Widget
 # Resume
-## Start Flutter
+## 1. Start Flutter
 flutter dapat di start dengan cara melakukan flutter run pada terminal. Sebelum itu pastikan plugin flutter pada code editor atau android studio sudah terinstall dengan benar. Untuk membangun sebuah aplikasi android dibutuhkan Android SDK. Oleh sebab itu pastikan semua bahan telah terinstall.
-## Widget
+## 2. Widget
 merupakan sebuah class yang mengatur bagian front end dari suatu aplikasi mobile.
 terdiri dari dua yaitu:
 ### Stateless Widget
 Widget yang data didalamnya tidak dapat berubah.
-### Statefull Widget
+### 3. Statefull Widget
 Widget yang data didalamnya dapat berubah.
-### Built in Widget
+### 4. Built in Widget
 merupakan Widget yang terdapat didalam class dan dapat langsung digunakan. Contohnya text Widget.
 
 ### Soal 
