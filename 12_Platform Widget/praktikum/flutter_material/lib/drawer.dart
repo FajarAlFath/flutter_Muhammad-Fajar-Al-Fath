@@ -34,6 +34,7 @@ class _LaciState extends State<Laci> {
             title: 'Calls',
             pressed: () {},
           ),
+          Divider(),
           Lacilist(
             iconData: Icons.bookmark_border,
             title: 'Saved Messages',
@@ -47,6 +48,7 @@ class _LaciState extends State<Laci> {
           Lacilist(
             iconData: Icons.person_add,
             title: 'Invite Friends',
+
             pressed: () {},
           ),
           Lacilist(
