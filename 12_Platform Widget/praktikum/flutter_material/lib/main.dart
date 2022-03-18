@@ -10,11 +10,9 @@ class MyApp extends StatelessWidget{
     return MaterialApp(
       title: 'Message Gram',
       theme: ThemeData(
-        primaryColor:Color.fromARGB(1, 47, 164, 231),
-        accentColor: Color.fromARGB(1, 185, 236, 228),
-        backgroundColor: Colors.white
+        primaryColor:Colors.blue,
+        backgroundColor: Colors.white,
       ),
-      debugShowCheckedModeBanner: false,
       home: Home(),
     );
   }
