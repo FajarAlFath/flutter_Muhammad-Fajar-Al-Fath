@@ -14,7 +14,7 @@ class _LaciState extends State<Laci> {
           UserAccountsDrawerHeader(
               accountName: Text('Muhammad Fajar Al Fath'),
               currentAccountPicture: CircleAvatar(
-                backgroundImage: AssetImage('asset/img/saya.png'),
+                backgroundImage: AssetImage('assets/img/saya.jpg'),
               ),
               accountEmail: Text('fjralfath11@gmail.com')),
    
