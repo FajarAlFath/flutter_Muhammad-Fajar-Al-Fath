@@ -14,52 +14,51 @@ class _LaciState extends State<Laci> {
           UserAccountsDrawerHeader(
               accountName: Text('Muhammad Fajar Al Fath'),
               currentAccountPicture: CircleAvatar(
-                backgroundImage: AssetImage('asset/img/'),
+                backgroundImage: AssetImage('asset/img/saya.png'),
               ),
               accountEmail: Text('fjralfath11@gmail.com')),
    
-          DrawerListTile(
+          Drawerlist(
             iconData: Icons.group,
             title: 'Grup Baru',
             pressed: () {},
           ),
-          DrawerListTile(
+          Drawerlist(
             iconData: Icons.lock,
             title: 'Chat Rahasia Baru',
             pressed: () {},
           ),
-          DrawerListTile(
+          Drawerlist(
             iconData: Icons.notifications,
             title: 'New Channel',
             pressed: () {},
           ),
-          DrawerListTile(
+          Drawerlist(
             iconData: Icons.contacts,
             title: 'Contacts',
             pressed: () {},
           ),
-          DrawerListTile(
+          Drawerlist(
             iconData: Icons.phone,
             title: 'Calls',
             pressed: () {},
           ),
-          DrawerListTile(
+          Drawerlist(
             iconData: Icons.bookmark_border,
             title: 'Saved Messages',
             pressed: () {},
           ),
-          DrawerListTile(
+          Drawerlist(
             iconData: Icons.settings,
             title: 'Settings',
             pressed: () {},
           ),
-          Divider(),
-          DrawerListTile(
+          Drawerlist(
             iconData: Icons.person_add,
             title: 'Invite Friends',
             pressed: () {},
           ),
-          DrawerListTile(
+          Drawerlist(
             iconData: Icons.help_outline,
             title: 'Telegram FAQ',
             pressed: () {},
@@ -70,12 +69,12 @@ class _LaciState extends State<Laci> {
   }
 }
 
-class DrawerListTile extends StatelessWidget {
+class Drawerlist extends StatelessWidget {
   final IconData iconData;
   final String title;
   final VoidCallback pressed;
 
-  const DrawerListTile({Key? key, required this.iconData, required this.title, required this.pressed})
+  const Drawerlist({Key? key, required this.iconData, required this.title, required this.pressed})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -86,7 +85,7 @@ class DrawerListTile extends StatelessWidget {
       title: Text(
         title,
         style: TextStyle(
-          fontSize: 18,
+          fontSize: 20,
         ),
       ),
     );
