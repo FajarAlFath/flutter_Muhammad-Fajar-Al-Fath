@@ -2,32 +2,31 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'chats.dart';
 
-class HomeScreen extends StatefulWidget {
-  @override
-  _HomeScreenState createState() => _HomeScreenState();
-}
+class HomeScreen extends StatelessWidget {
+  HomeScreen({Key? key}) : super(key: key);
 
-class _HomeScreenState extends State<HomeScreen> {
+  // ignore: prefer_const_constructors
+  var screens = [Chats()];
+
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
         leading: CupertinoButton(
           padding: EdgeInsets.zero,
-          child: Text('Edit'),
+          child: const Text('Edit'),
           onPressed: () {},
         ),
-        middle: Text('Message Gram'),
+        middle: const Text('Message Gram'),
         trailing: CupertinoButton(
           padding: EdgeInsets.zero,
-          child: Icon(
-            Icons.pin_drop_outlined),
+          child: const Icon(Icons.pin_drop_outlined),
           onPressed: () {},
         ),
       ),
       child: CupertinoTabScaffold(
         tabBar: CupertinoTabBar(
-          items: [
+          items: const [
             BottomNavigationBarItem(
               label: "Chats",
               icon: Icon(CupertinoIcons.chat_bubble_2_fill),
@@ -47,11 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
         tabBuilder: (BuildContext context, int index) {
-          return Container(
-            child: Center(
-              child: Text('$index'),
-            ),
-          );
+          return screens[0];
         },
       ),
     );
