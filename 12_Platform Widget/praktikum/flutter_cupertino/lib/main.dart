@@ -10,7 +10,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context){
     return CupertinoApp(
       home: HomeScreen(),
-      theme: CupertinoThemeData(primaryColor: Colors.blue),
+      debugShowCheckedModeBanner: false,
+      theme: CupertinoThemeData(
+        primaryColor: Colors. lightGreen),
     );
   }
 }
