@@ -10,9 +10,28 @@ class _HomeScreenState extends State<HomeScreen>{
   @override 
   Widget build(BuildContext context){
     return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
-        middle: Text("Message App"),
-      ), child: Center(child: Text('hello world'),),
+      child: CupertinoTabScaffold(
+        tabBar: CupertinoTabBar(
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(CupertinoIcons.chat_bubble_2_fill),),
+            BottomNavigationBarItem(
+              icon: Icon(CupertinoIcons.phone),),
+            BottomNavigationBarItem(
+              icon: Icon(CupertinoIcons.settings),),
+            BottomNavigationBarItem(
+              icon: Icon(CupertinoIcons.person),),
+
+          ],
+          ),
+          tabBuilder: (BuildContext context, int index){
+            return Container(
+              child: Center(
+                child: Text('$index'),
+              ),
+            );
+          },
+      ),
     );
   }
 }
