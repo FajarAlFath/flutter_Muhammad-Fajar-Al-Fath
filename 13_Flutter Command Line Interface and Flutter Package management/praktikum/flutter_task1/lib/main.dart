@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: Homepage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -20,7 +21,13 @@ class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Badges and Chips'),
+        backgroundColor: Colors.green,
+      ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           const Chip(
             padding: EdgeInsets.all(0),
@@ -30,16 +37,22 @@ class Homepage extends StatelessWidget {
               style: TextStyle(color: Colors.white),
             ),
           ),
-          Badge(
-            toAnimate: false,
-            shape: BadgeShape.square,
-            borderRadius: BorderRadius.circular(8),
-            badgeContent: const Text(
-              'Badge',
-              style: TextStyle(color: Colors.white),
-            ),
-            badgeColor: const Color.fromARGB(255, 107, 3, 126),
-          )
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Badge(
+                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                toAnimate: false,
+                shape: BadgeShape.square,
+                borderRadius: BorderRadius.circular(12),
+                badgeContent: const Text(
+                  'Badge',
+                  style: TextStyle(color: Colors.white),
+                ),
+                badgeColor: const Color.fromARGB(255, 107, 3, 126),
+              ),
+            ],
+          ),
         ],
       ),
     );
