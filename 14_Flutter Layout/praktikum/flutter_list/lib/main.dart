@@ -36,7 +36,15 @@ class HomepageState extends State<Homepage> {
             return ListTile(
               leading: CircleAvatar(
                 radius: 20,
-                backgroundImage: NetworkImage(''),
+                child: Text(
+                  items[i].nama[0],
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w300,
+                  ),
+                ),
+                backgroundColor: Colors.purple,
               ),
               title: Text(
                 items[i].nama,
