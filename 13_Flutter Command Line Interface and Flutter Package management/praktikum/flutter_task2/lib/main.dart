@@ -34,7 +34,7 @@ class Homepage extends StatelessWidget {
             height: 100,
             width: 100,
             data: 'Alterra Academy',
-            barcode: Barcode.code128(escapes: true),
+            barcode: Barcode.qrCode(),
             errorBuilder: (context, error) => Center(child: Text(error)),
           ),),
           Container( 
@@ -43,7 +43,7 @@ class Homepage extends StatelessWidget {
             height: 100,
             width: 100,
             data: 'Flutter Asyik',
-            barcode: Barcode.code128(escapes: true),
+            barcode: Barcode.qrCode(),
             errorBuilder: (context, error) => Center(child: Text(error)),
           ),),
           Container( 
@@ -52,7 +52,7 @@ class Homepage extends StatelessWidget {
             height: 100,
             width: 100,
             data: 'Muhammad Fajar Al Fath',
-            barcode: Barcode.code128(escapes: true),
+            barcode: Barcode.qrCode(),
             errorBuilder: (context, error) => Center(child: Text(error)),
           ),),
         ],
