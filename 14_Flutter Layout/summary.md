@@ -15,3 +15,8 @@ Column: child(
     Text('ini column'),
 ),
 ```
+## Tugas
+1. Membuat sebuah tampilan list view chat. Dalam tugas ini dibuat dua buat file yaitu file main.dart dan file model.dart. File main berisi initiate void main dan class Homepage yang mengatur tampilan awal dari aplikasi sedangkan Class Model berisi data-data chat yang akan ditampilkan di homepage. Berikut hasilnya:
+![flutter_list](screenshots/1.png)
+2. Membuat sebuah tampilan grid view. Hasil:
+![flutter_grid](screenshots/2.png)
