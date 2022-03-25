@@ -11,6 +11,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        primaryColor: Colors.green,
+      ),
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: <String, WidgetBuilder>{
@@ -30,8 +33,7 @@ class Homepage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('assets Demo'),
-        backgroundColor: Colors.green,
+        title: const Text('Assets Demo'),
       ),
       body: GridView.count(
         mainAxisSpacing: 20,
