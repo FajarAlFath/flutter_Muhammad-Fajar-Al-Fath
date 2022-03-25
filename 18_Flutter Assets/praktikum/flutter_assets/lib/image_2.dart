@@ -7,8 +7,7 @@ class Imagepage2 extends StatelessWidget{
     return Scaffold(
       body: Image.asset(
         'assets/image/2.jpg',
-        height: 500,
-        fit: BoxFit.cover,
+        fit: BoxFit.fill,
       )
     );
   }

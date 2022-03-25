@@ -34,6 +34,8 @@ class Homepage extends StatelessWidget {
         backgroundColor: Colors.green,
       ),
       body: GridView.count(
+        mainAxisSpacing: 20,
+        padding: const EdgeInsets.only(top: 50),
         crossAxisCount: 2,
         children: <Widget>[
           ElevatedButton(
@@ -41,8 +43,6 @@ class Homepage extends StatelessWidget {
               Navigator.pushNamed(context, '/image');
             },
             child: Container(
-              height: 300,
-              width: 300,
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/image/1.jpg'),
@@ -56,8 +56,6 @@ class Homepage extends StatelessWidget {
               Navigator.pushNamed(context, '/image2');
             },
             child: Container(
-              height: 300,
-              width: 300,
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/image/2.jpg'),
@@ -71,8 +69,6 @@ class Homepage extends StatelessWidget {
               Navigator.pushNamed(context, '/image3');
             },
             child: Container(
-              height: 300,
-              width: 300,
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/image/3.jpg'),
@@ -86,8 +82,6 @@ class Homepage extends StatelessWidget {
               Navigator.pushNamed(context, '/image4');
             },
             child: Container(
-              height: 300,
-              width: 300,
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/image/4.jpg'),
