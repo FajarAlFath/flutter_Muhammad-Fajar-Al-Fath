@@ -6,7 +6,7 @@ class Imagepage extends StatelessWidget{
   Widget build(BuildContext context){
     return Scaffold(
       body: Image.asset(
-        'assets/image/1.jpg',
+        'assets/image/1.png',
         fit: BoxFit.fill,
       )
     );

@@ -38,57 +38,65 @@ class Homepage extends StatelessWidget {
         padding: const EdgeInsets.only(top: 50),
         crossAxisCount: 2,
         children: <Widget>[
-          ElevatedButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/image');
-            },
-            child: Container(
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/image/1.jpg'),
-                  fit: BoxFit.cover,
+          Column(
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/image');
+                },
+                child: const Image(
+                  image: AssetImage('assets/image/1.png'),
+                  width: 120.0,
+                  height: 120.0,
                 ),
               ),
-            ),
+              const Text('gambar 1'),
+            ],
           ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/image2');
-            },
-            child: Container(
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/image/2.jpg'),
-                  fit: BoxFit.cover,
+          Column(
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/image2');
+                },
+                child: const Image(
+                  image: AssetImage('assets/image/2.png'),
+                  width: 120.0,
+                  height: 120.0,
                 ),
               ),
-            ),
+              const Text('gambar 2'),
+            ],
           ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/image3');
-            },
-            child: Container(
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/image/3.jpg'),
-                  fit: BoxFit.cover,
+          Column(
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/image3');
+                },
+                child: const Image(
+                  image: AssetImage('assets/image/3.png'),
+                  width: 120.0,
+                  height: 120.0,
                 ),
               ),
-            ),
+              const Text('gambar 3'),
+            ],
           ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/image4');
-            },
-            child: Container(
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/image/4.jpg'),
-                  fit: BoxFit.cover,
+          Column(
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/image4');
+                },
+                child: const Image(
+                  image: AssetImage('assets/image/4.png'),
+                  width: 120.0,
+                  height: 120.0,
                 ),
               ),
-            ),
+              const Text('gambar 4'),
+            ],
           ),
         ],
       ),
