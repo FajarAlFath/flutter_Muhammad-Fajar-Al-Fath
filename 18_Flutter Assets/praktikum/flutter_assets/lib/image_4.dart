@@ -6,9 +6,8 @@ class Imagepage4 extends StatelessWidget{
   Widget build(BuildContext context){
     return Scaffold(
       body: Image.asset(
-        '',
-        height: 500,
-        fit: BoxFit.cover,
+        'assets/image/4.jpg',
+        fit: BoxFit.fill,
       )
     );
   }

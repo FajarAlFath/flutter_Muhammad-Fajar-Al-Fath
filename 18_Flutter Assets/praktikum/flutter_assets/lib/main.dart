@@ -11,12 +11,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const Homepage(),
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: <String, WidgetBuilder>{
         '/': (context) => const Homepage(),
         '/image': (context) => const Imagepage(),
+        '/image2': (context) => const Imagepage2(),
+        '/image3': (context) => const Imagepage3(),
+        '/image4': (context) => const Imagepage4(),
       },
     );
   }
@@ -34,15 +36,63 @@ class Homepage extends StatelessWidget {
       body: GridView.count(
         crossAxisCount: 2,
         children: <Widget>[
-          SizedBox(
-            width: 20,
-            height: 20,
-            child: ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/imagepage');
-              },
-              child: const Image(
-                image: AssetImage('assets/1.jpg'),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/image');
+            },
+            child: Container(
+              height: 300,
+              width: 300,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/image/1.jpg'),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/image2');
+            },
+            child: Container(
+              height: 300,
+              width: 300,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/image/2.jpg'),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/image3');
+            },
+            child: Container(
+              height: 300,
+              width: 300,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/image/3.jpg'),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/image4');
+            },
+            child: Container(
+              height: 300,
+              width: 300,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/image/4.jpg'),
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
           ),
