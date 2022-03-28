@@ -18,7 +18,7 @@ Merupakan gaya penulisan alphabet. Fonts dalam flutter dapat di customisasi deng
 
 ## 4. Soal Praktikum
 Membuat gridview yang berisi gambar, ketika gambar di klik maka akan menampilkan halaman baru yang berisi full dari gambar tersebut.
-berikut hasilnya:
+#### berikut hasilnya:
 ![gambar 1](screenshots/1.png)
-Ketika dialihkan ke halaman berikutnya:
+#### Ketika dialihkan ke halaman berikutnya:
 ![gambar 2](screenshots/2.png)
