@@ -16,4 +16,9 @@ Image.network('https://ini gambar'),
 Merupakan gaya penulisan alphabet. Fonts dalam flutter dapat di customisasi dengan cara mengambilnya dari package atau mengimport font tersebut dengen cara mendownload dan mendaftarkannya di pubspec.yml. Untuk menggunakan font dapat menggunakan code berikut:
 `fontFamily: 'silverroman',`
 
-##
+## 4. Soal Praktikum
+Membuat gridview yang berisi gambar, ketika gambar di klik maka akan menampilkan halaman baru yang berisi full dari gambar tersebut.
+berikut hasilnya:
+![gambar 1](screenshots/1.png)
+Ketika dialihkan ke halaman berikutnya:
+![gambar 2](screenshots/2.png)
