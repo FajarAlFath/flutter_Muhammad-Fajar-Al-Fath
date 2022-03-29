@@ -1,49 +1,47 @@
 //this program contain the answer from task 1 and task 2 section 11.
 
 import 'dart:async';
-import 'dart:html';
 import 'package:flutter/material.dart';
 import 'dart:core';
 import 'package:intl/intl.dart';
 
 void main() {
-  runApp(new MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget{
+  const MyApp({Key? key}) : super(key: key);
+
   @override
-  _MyAppState createState() => new _MyAppState();
+  _MyAppState createState() => _MyAppState();
 }
 
 class _MyAppState extends State{
   var jam = 'JAM';
-  void Mulai() {
-    Timer.periodic(new Duration(seconds: 1),(_){
-      var date = new DateTime.now();
-      var formatedjam = new DateFormat.Hms().format(date);
-      setState((){
-        jam = formatedjam;
-      });
-    });
-  }
 
  @override 
  void initState(){
-   Mulai();
+   Timer.periodic(const Duration(seconds: 1),(_){
+     var date = DateTime.now();
+     var formatedjam = DateFormat.Hms().format(date);
+     setState((){
+       jam = formatedjam;
+     });
+   });
    super.initState();
  }
 
 @override
 Widget build(BuildContext context) {
-  return new MaterialApp(
-    home: new Scaffold(
-      appBar: new AppBar(
+  return MaterialApp(
+    home: Scaffold(
+      appBar: AppBar(
         title: const Text('Simple Watch for Alterra'),
        ),
       body: Center(
         child: Text(
           jam,
-          style: TextStyle(fontSize: 50),
+          style: const TextStyle(fontSize: 50),
          ),
        ),
      ),
