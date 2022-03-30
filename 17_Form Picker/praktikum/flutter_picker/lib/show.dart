@@ -1,4 +1,6 @@
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:open_file/open_file.dart';
 
 class Show extends StatefulWidget{
   const Show({Key? key}) : super(key: key);
@@ -21,5 +23,10 @@ class _ShowState extends State<Show>{
       ),
       body: ,
     );
+  }
+
+
+  void _openFile(PlatformFile,file){
+    OpenFile.open(file.path);
   }
 }
