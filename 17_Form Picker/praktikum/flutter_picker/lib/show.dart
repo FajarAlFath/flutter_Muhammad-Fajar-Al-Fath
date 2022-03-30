@@ -3,7 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:open_file/open_file.dart';
 
 class Show extends StatefulWidget{
-  const Show({Key? key}) : super(key: key);
+  const Show(Type string, {Key? key, required this.file, required this.date, required this.color, required this.caption}) : super(key: key);
+
+  final String file;
+  final String date;
+  final Color color;
+  final String caption;  
 
   @override 
   _ShowState createState()=> _ShowState();
