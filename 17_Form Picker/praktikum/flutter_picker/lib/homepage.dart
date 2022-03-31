@@ -14,11 +14,7 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
-  var datePick;
-  var selectedFile;
-  var colorPick;
-  var input;
-  final _textController = TextEditingController();
+
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +48,6 @@ class _HomepageState extends State<Homepage> {
                   borderRadius: BorderRadius.circular(20),
                   borderSide: const BorderSide(),
                 ),
-
               ),
             ),
             Column(
@@ -60,14 +55,11 @@ class _HomepageState extends State<Homepage> {
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context,
-                    MaterialPageRoute(builder: ((context) => Show(
-                      // file: ,
-                      // time: date,
-                      // color: color,
-                      caption: _textController,
-                    )))
-                    );
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: ((context) => Show(
+                              caption: _textController))));
                   },
                   child: const Text(
                     'Show the data',
