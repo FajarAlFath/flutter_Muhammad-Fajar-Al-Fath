@@ -7,6 +7,7 @@ class Galery extends StatefulWidget {
   _GaleryState createState() => _GaleryState();
 }
 
+//class private dari galery state
 class _GaleryState extends State<Galery> {
   @override
   Widget build(BuildContext context) {
@@ -15,6 +16,7 @@ class _GaleryState extends State<Galery> {
       padding: const EdgeInsets.only(top: 20),
       crossAxisCount: 2,
       children: <Widget>[
+        //baris 1 gambar
         Column(
           children: [
             const Image(
@@ -26,26 +28,7 @@ class _GaleryState extends State<Galery> {
               label: const Text('  Dialog Allert'),
               icon: const Icon(Icons.info),
               onPressed: () {
-                AlertDialog alert = AlertDialog(
-                  content: Container(
-                    width: 100,
-                    height: 100,
-                    child: Image.asset('assets/img/1.png'),
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle
-                    ),
-                  ),
-                  title: const Text('Gambar Berhasil Ditampilkan'),
-                  actions: [
-                    TextButton(
-                      child: const Text('Ok'),
-                      onPressed: () {
-                        Navigator.of(context).pop();
-                      },
-                    ),
-                  ],
-                );
-                showDialog(context: context, builder: (context) => alert);
+               showAlert('assets/img/1.png');
               },
             ),
             const Divider(),
@@ -58,6 +41,7 @@ class _GaleryState extends State<Galery> {
             ),
           ],
         ),
+        //baris 2 gambar
         Column(
           children: [
             const Image(
@@ -69,18 +53,7 @@ class _GaleryState extends State<Galery> {
               label: const Text('Dialog Allert  '),
               icon: const Icon(Icons.info),
               onPressed: () {
-                AlertDialog(
-                  content: const CircleAvatar(
-                    backgroundImage: AssetImage('assets/img/2.png'),
-                    child: Text('Gambar Berhasil Ditampilkan'),
-                  ),
-                  actions: [
-                    TextButton(
-                      child: const Text('Ok'),
-                      onPressed: () {},
-                    )
-                  ],
-                );
+                showAlert('assets/img/2.png');
               },
             ),
             const Divider(),
@@ -93,6 +66,7 @@ class _GaleryState extends State<Galery> {
             ),
           ],
         ),
+        //baris 3 gambar
         Column(
           children: [
             const Image(
@@ -104,18 +78,7 @@ class _GaleryState extends State<Galery> {
               label: const Text('Dialog Allert  '),
               icon: const Icon(Icons.info),
               onPressed: () {
-                AlertDialog(
-                  content: const CircleAvatar(
-                    backgroundImage: AssetImage('assets/img/3.png'),
-                    child: Text('Gambar Berhasil Ditampilkan'),
-                  ),
-                  actions: [
-                    TextButton(
-                      child: const Text('Ok'),
-                      onPressed: () {},
-                    )
-                  ],
-                );
+                showAlert('assets/img/3.png');
               },
             ),
             const Divider(),
@@ -128,6 +91,7 @@ class _GaleryState extends State<Galery> {
             ),
           ],
         ),
+        //baris 4 gambar
         Column(
           children: [
             const Image(
@@ -139,18 +103,7 @@ class _GaleryState extends State<Galery> {
               label: const Text('Dialog Allert  '),
               icon: const Icon(Icons.info),
               onPressed: () {
-                AlertDialog(
-                  content: const CircleAvatar(
-                    backgroundImage: AssetImage('assets/img/4.png'),
-                    child: Text('Gambar Berhasil Ditampilkan'),
-                  ),
-                  actions: [
-                    TextButton(
-                      child: const Text('Ok'),
-                      onPressed: () {},
-                    )
-                  ],
-                );
+                showAlert('assets/img/4.png'); 
               },
             ),
             const Divider(),
@@ -167,6 +120,29 @@ class _GaleryState extends State<Galery> {
     );
   }
 
+  //Widget function show alert untuk memanggil si alert
+  void showAlert(String i) {
+    AlertDialog alert = AlertDialog(
+      content: Container(
+        width: 100,
+        height: 100,
+        child: Image.asset(i),
+        decoration: const BoxDecoration(shape: BoxShape.circle),
+      ),
+      title: const Text('Gambar Berhasil Ditampilkan'),
+      actions: [
+        TextButton(
+          child: const Text('Ok'),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
+      ],
+    );
+     showDialog(context: context, builder: (context) => alert);
+  }
+
+  //Widget function show modal untuk memanggil si modal
   void showModal(String i) {
     showModalBottomSheet(
         shape: const RoundedRectangleBorder(
@@ -178,15 +154,15 @@ class _GaleryState extends State<Galery> {
         builder: (context) {
           return Container(
             padding: const EdgeInsets.only(top: 20),
-              child: Column(
-                children: <Widget>[
-                  CircleAvatar(
-                    radius: 50,
-                    backgroundImage: AssetImage(i),
-                  ),
-                  const Text('Hasil Gambar')
-                ],
-              ),
+            child: Column(
+              children: <Widget>[
+                CircleAvatar(
+                  radius: 50,
+                  backgroundImage: AssetImage(i),
+                ),
+                const Text('Hasil Gambar')
+              ],
+            ),
           );
         });
   }
