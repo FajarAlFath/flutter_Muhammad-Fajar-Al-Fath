@@ -84,7 +84,7 @@ class _AddContactState extends State<AddContact>{
             },
           ),
           SizedBox(
-            height: 50,
+            height: 30,
             child: ElevatedButton.icon(
               onPressed: (){
                 if(_formKey.currentState!.validate()){
