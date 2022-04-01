@@ -32,6 +32,11 @@ class _AddContactState extends State<AddContact>{
             inputForm(),
             ElevatedButton.icon(
               onPressed: (){
+                if(_formKey.currentState!.validate()){
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text('Data Disimpan'))
+                  );
+                }
                 Navigator.push(context,
                 MaterialPageRoute(builder: (context) => Listcontact(
                 namaUser : controller.text,
