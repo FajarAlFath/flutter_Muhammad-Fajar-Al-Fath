@@ -71,7 +71,7 @@ class Homepage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (BuildContext context) => const Listcontact(),
+                      builder: (BuildContext context) => const Listcontact(namaUser: '', nomorUser: '',),
                     ),
                   );
                 }),
