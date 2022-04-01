@@ -31,21 +31,6 @@ class _AddContactState extends State<AddContact>{
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             inputForm(),
-            ElevatedButton.icon(
-              onPressed: (){
-                if(_formKey.currentState!.validate()){
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Data Disimpan'))
-                  );
-                }
-                Navigator.push(context,
-                MaterialPageRoute(builder: (context) => Listcontact(
-                namaUser : controller.text,
-                nomorUser : controller1.text,
-                )));
-              },
-              icon: const Icon(Icons.save),
-              label: const Text('Save your data')),
           ],
         ),
         ),
@@ -73,7 +58,7 @@ class _AddContactState extends State<AddContact>{
               ),
             ),
             validator: (value){
-              if(value!.isEmpty){
+              if(value == null || value.isEmpty){
                 return 'Nama tidak boleh kosong';
               }
               return null;
@@ -92,11 +77,29 @@ class _AddContactState extends State<AddContact>{
               ),
             ),
             validator: (value){
-              if(value!.isEmpty){
+              if(value == null || value.isEmpty){
                 return 'Nomor tidak boleh kosong';
               }
               return null;
             },
+          ),
+          SizedBox(
+            height: 50,
+            child: ElevatedButton.icon(
+              onPressed: (){
+                if(_formKey.currentState!.validate()){
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text('Data Disimpan'))
+                  );
+                }
+                Navigator.push(context,
+                MaterialPageRoute(builder: (context) => Listcontact(
+                namaUser : controller.text,
+                nomorUser : controller1.text,
+                )));
+              },
+              icon: const Icon(Icons.save),
+              label: const Text('Save your data')),
           ),
         ],
       ),
