@@ -14,6 +14,7 @@ class _AddContactState extends State<AddContact>{
   TextEditingController controller1 = TextEditingController();
 
   @override 
+  //widget scaffold
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
@@ -51,6 +52,7 @@ class _AddContactState extends State<AddContact>{
     );
   }
 
+//widget input form bagian form
   Widget inputForm(){
     return Form(
       key: _formKey,
