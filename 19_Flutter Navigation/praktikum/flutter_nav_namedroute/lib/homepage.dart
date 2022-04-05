@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_nav/add.dart';
+
 
 class Homepage extends StatelessWidget {
-  const Homepage({Key? key, required this.namaUser, required this.nomorUser})
-      : super(key: key);
+const Homepage({Key? key}) : super(key: key);
 
-  final String namaUser;
-  final String nomorUser;
+  static const routeName = '/homepage';
+
   @override
   Widget build(BuildContext context) {
+    final args = ModalRoute.of(context)!.settings.arguments as ScreenArguments;
+
     return Scaffold(
       body: ListView(
         children: <Widget>[
@@ -16,7 +17,7 @@ class Homepage extends StatelessWidget {
           dataContact('Annisa', '082356704923'),
           dataContact('Nabila', '082356704923'),
           dataContact('Robot', '082356704923'),
-          dataContact(namaUser, nomorUser),
+          dataContact(args.nama, args.pesan),
         ],
       ),
       floatingActionButton: FloatingActionButton(
@@ -25,17 +26,14 @@ class Homepage extends StatelessWidget {
           color: Colors.white,
         ),
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (BuildContext context) => const Add()),
-          );
+          Navigator.pushNamed(context, '/add');
         },
       ),
     );
   }
 
   //widget data contact to add your contact hardcode
-  Widget dataContact(var name, String number) {
+  Widget dataContact(var name, var number) {
     return Column(
       children: <Widget>[
         ListTile(
@@ -53,3 +51,11 @@ class Homepage extends StatelessWidget {
     );
   }
 }
+
+class ScreenArguments{
+    late final String? nama;
+    late final String? pesan;
+
+    ScreenArguments(this.nama,this.pesan);
+  }
+ 
