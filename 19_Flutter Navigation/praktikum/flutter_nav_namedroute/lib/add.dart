@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_nav_namedroute/homepage.dart';
-
 
 class Add extends StatefulWidget {
   const Add({Key? key}) : super(key: key);
@@ -9,9 +7,17 @@ class Add extends StatefulWidget {
   State<Add> createState() => _AddState();
 }
 
+class ScreenArguments {
+  final String nama;
+  final String pesan;
+
+  ScreenArguments(this.nama, this.pesan);
+}
+
+
+
 class _AddState extends State<Add> {
   final _formKey = GlobalKey<FormState>();
-
   TextEditingController controller = TextEditingController();
   TextEditingController controller1 = TextEditingController();
 
@@ -85,9 +91,9 @@ class _AddState extends State<Add> {
                     }
                     Navigator.pushNamed(
                       context,
-                      Homepage.routeName,
-                      arguments: ScreenArguments(controller.text, controller1.text),
-                      
+                      '/',
+                      arguments:
+                          ScreenArguments(controller.text, controller1.text),
                     );
                   },
                   icon: const Icon(Icons.save),
@@ -99,4 +105,3 @@ class _AddState extends State<Add> {
     );
   }
 }
-

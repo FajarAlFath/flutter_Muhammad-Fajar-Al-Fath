@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
+import 'add.dart';
 
 
 class Homepage extends StatelessWidget {
-const Homepage({Key? key}) : super(key: key);
-
-  static const routeName = '/homepage';
+  const Homepage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -51,11 +50,3 @@ const Homepage({Key? key}) : super(key: key);
     );
   }
 }
-
-class ScreenArguments{
-    late final String? nama;
-    late final String? pesan;
-
-    ScreenArguments(this.nama,this.pesan);
-  }
- 
