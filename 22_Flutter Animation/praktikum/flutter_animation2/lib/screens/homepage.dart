@@ -26,9 +26,20 @@ class Homepage extends StatelessWidget {
           color: Colors.white,
         ),
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (BuildContext context) => const Add()),
+          Navigator.of(context).push(
+            PageRouteBuilder(
+              pageBuilder: (context, animation, secondaryAnimation) {
+                return const Add();
+              },
+              transitionsBuilder:
+                  (context, animation, secondaryAnimation, child) {
+                final tween = Tween(begin: 0.0, end: 1.0);
+                return ScaleTransition(
+                  scale: animation.drive(tween),
+                  child: child,
+                );
+              },
+            ),
           );
         },
       ),
