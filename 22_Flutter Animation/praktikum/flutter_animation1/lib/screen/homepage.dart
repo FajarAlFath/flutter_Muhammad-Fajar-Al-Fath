@@ -8,22 +8,32 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
+  bool pilihan = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Animation'),
       ),
-      body: SafeArea(
-          child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [],
+      body: Center(
+        child: AnimatedContainer(
+          width: pilihan ? 50 : 300,
+          height: pilihan ? 100 : 200,
+          decoration: ShapeDecoration(
+            color: pilihan ? Colors.amber[600] : Colors.blueAccent[400],
+            shape: const CircleBorder(),
           ),
-        ],
-      )),
+          duration: const Duration(seconds: 1),
+          curve: Curves.easeInOut,
+          child: GestureDetector(
+            onTap: () {
+              setState(() {
+                pilihan = !pilihan;
+              });
+            },
+          ),
+        ),
+      ),
     );
   }
 }
