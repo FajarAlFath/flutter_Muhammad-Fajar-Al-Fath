@@ -4,12 +4,14 @@ import 'component/contact.dart' as contact_component;
 import 'homepage.dart';
 
 void main() {
-  runApp(MultiProvider(providers: [
-    ChangeNotifierProvider(
-      create: (_) => contact_component.Contact(),
-    )
-  ],
-  child: const MyApp(),));
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(
+        create: (_) => contact_component.Contact(),
+      )
+    ],
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
