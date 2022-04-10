@@ -22,6 +22,12 @@ class _HomepageState extends State<Homepage> {
           decoration: ShapeDecoration(
             color: pilihan ? Colors.amber[600] : Colors.blueAccent[400],
             shape: const CircleBorder(),
+            image: const DecorationImage(
+              image: AssetImage(
+                'assets/img/man.png',
+              ),
+              fit: BoxFit.contain,
+            ),
           ),
           duration: const Duration(seconds: 1),
           curve: Curves.easeInOut,

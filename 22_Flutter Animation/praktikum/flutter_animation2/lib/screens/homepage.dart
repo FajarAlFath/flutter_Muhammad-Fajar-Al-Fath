@@ -39,6 +39,7 @@ class Homepage extends StatelessWidget {
                   child: child,
                 );
               },
+              transitionDuration: const Duration(milliseconds: 700),
             ),
           );
         },
