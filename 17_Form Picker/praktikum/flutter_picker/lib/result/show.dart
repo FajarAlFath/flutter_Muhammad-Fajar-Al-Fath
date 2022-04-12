@@ -1,37 +1,53 @@
-import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:open_file/open_file.dart';
+import 'package:flutter_picker/provider/provider_data.dart';
+import 'package:provider/provider.dart';
 
-class Show extends StatefulWidget{
-  const Show(Type string, {Key? key, required this.file, required this.date, required this.color, required this.caption}) : super(key: key);
+class Result extends StatelessWidget {
+  const Result({Key? key}) : super(key: key);
 
-  final String file;
-  final String date;
-  final Color color;
-  final String caption;  
-
-  @override 
-  _ShowState createState()=> _ShowState();
-}
-
-class _ShowState extends State<Show>{
-  @override 
-  Widget  build(BuildContext context){
+  @override
+  Widget build(BuildContext context) {
+    final route =
+        ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>;
+    final id = route['id'];
+    final data = Provider.of<Item>(context)
+        .item
+        .firstWhere((element) => element.id == id);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Preview Post'),
-        centerTitle: true,
-        leading: InkWell(
-          onTap: (){},
-          child: const Icon(Icons.chevron_left_sharp),
-        ),
+        title: const Text('Your data'),
+        backgroundColor: data.color,
       ),
-      body: ,
+      body: Column(
+        children: [
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.35,
+            child: Image.file(
+              data.cover,
+              fit: BoxFit.cover,
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.all(10),
+            width: MediaQuery.of(context).size.width,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  data.date,
+                  style: const TextStyle(fontSize: 15),
+                ),
+                Text(
+                  data.caption,
+                  style: const TextStyle(
+                    fontSize: 18,
+                  ),
+                )
+              ],
+            ),
+          ),
+        ],
+      ),
     );
-  }
-
-
-  void _openFile(PlatformFile,file){
-    OpenFile.open(file.path);
   }
 }
