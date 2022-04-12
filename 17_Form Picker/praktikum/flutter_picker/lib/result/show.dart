@@ -21,10 +21,10 @@ class Result extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.35,
+            height: MediaQuery.of(context).size.height * 0.50,
             child: Image.file(
               data.cover,
-              fit: BoxFit.cover,
+              fit: BoxFit.contain,
             ),
           ),
           Container(
@@ -42,7 +42,13 @@ class Result extends StatelessWidget {
                   style: const TextStyle(
                     fontSize: 18,
                   ),
-                )
+                ),
+                ListTile(
+                  leading: CircleAvatar(
+                    backgroundColor: data.color,
+                  ),
+                  subtitle: const Text('Warna diatas adalah yang dipilih'),
+                ),
               ],
             ),
           ),

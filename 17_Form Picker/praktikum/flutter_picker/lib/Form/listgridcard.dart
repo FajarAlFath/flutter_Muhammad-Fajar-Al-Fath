@@ -8,9 +8,10 @@ class ListGridCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final items = Provider.of<Data>(context);
     return ClipRRect(
-      child: GestureDetector(
+      child: InkWell(
         onTap: () {
-          Navigator.of(context).pushNamed('/view', arguments: {'id': items.id});
+          Navigator.of(context)
+              .pushNamed('/result', arguments: {'id': items.id});
         },
         child: Card(
           child: Image.file(
