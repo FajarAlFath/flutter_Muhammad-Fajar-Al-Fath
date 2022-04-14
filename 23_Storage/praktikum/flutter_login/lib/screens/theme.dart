@@ -72,7 +72,8 @@ class ThemeHelper {
         ),
       ),
       minimumSize: MaterialStateProperty.all(const Size(50, 50)),
-      backgroundColor: MaterialStateProperty.all(Colors.transparent),
+      backgroundColor:
+          MaterialStateProperty.all(const Color.fromARGB(0, 217, 176, 176)),
       shadowColor: MaterialStateProperty.all(Colors.transparent),
     );
   }

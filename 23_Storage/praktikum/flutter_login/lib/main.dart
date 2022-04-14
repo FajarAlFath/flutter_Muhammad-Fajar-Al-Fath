@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_login/screens/login.dart';
 import 'package:flutter_login/screens/onboarding.dart';
-import 'package:flutter_login/screens/register.dart';
+
+import 'screens/first_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       routes: <String, WidgetBuilder>{
         '/': (context) => const OnBoarding(),
         '/login': (context) => const Login(),
-        '/register': (context) => const Register(),
+        '/firstscreen': (context) => const FirstScreen(),
       },
     );
   }
