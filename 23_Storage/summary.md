@@ -12,6 +12,6 @@ Merupakan suatu metode penyimpanan yang sederhana berbasis key-value dan efektif
 
 Merupakan metode penyimpanan yang lebih rumit dari sharedpreferences dan dapat menyimpan data dalam jumlah besar di local device.
 
-## Halaman Form Login Menggunakan SharedPreferences dan Provider
+## Halaman Form Login Menggunakan SharedPreferences 
 
-## List contact menggunakan SQLlite dan BLoC
+## List contact menggunakan SQLlite
