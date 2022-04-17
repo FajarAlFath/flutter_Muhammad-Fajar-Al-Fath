@@ -1,76 +1,61 @@
-import 'dart:convert';
-import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
+import 'view_model.dart';
 
 class Homepage extends StatefulWidget {
-  const Homepage({ Key? key }) : super(key: key);
+  const Homepage({Key? key}) : super(key: key);
 
   @override
   State<Homepage> createState() => _HomepageState();
 }
 
 class _HomepageState extends State<Homepage> {
-
-  List _get = [];
+  List dataUser = [];
+  void getDatauser() {
+    UserViewModel().getUsers().then((value) {
+      setState(() {
+        dataUser = value;
+      });
+    });
+  }
 
   @override
   void initState() {
-    _getData();
+    getDatauser();
     super.initState();
   }
-
-  Future _getData()async{
-    try{
-      final response = await http.get(Uri.parse('https://my-json-server.typicode.com/hadihammurabi/flutter-webservice/contacts'));
-      
-      if(response.statusCode == 200){
-        final data = jsonDecode(response.body);
-
-        setState(() {
-          _get = data[''];
-        });
-      }
-
-
-    } catch(e){
-      // ignore: avoid_print
-      print(e);
-    }
-  }
-
-
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('List contacts'),
+        title: const Text("Halaman Utama"),
       ),
-      body: ListView.separated(
-          itemBuilder: (context, i){
-            return ListTile(
-              leading: CircleAvatar(
-                radius: 20,
-                child: Text(
-                  _get[i],
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 12,
-                    fontWeight: FontWeight.w300,
+      // ignore: unnecessary_null_comparison
+      body: dataUser == null
+          ? const Center(
+              child: CircularProgressIndicator(),
+            )
+          : ListView.builder(
+              itemCount: dataUser.length,
+              itemBuilder: (context, i) {
+                return ListTile(
+                  leading: CircleAvatar(
+                    radius: 20,
+                    child: Text(
+                      dataUser[i].name[0],
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w300,
+                      ),
+                    ),
+                    backgroundColor: Colors.purple,
                   ),
-                ),
-                backgroundColor: Colors.purple,
-              ),
-              title: Text(
-                _get[i],
-                style: const TextStyle(fontWeight: FontWeight.bold),
-              ),
-            );
-          },
-          separatorBuilder: (context, i){
-            return const Divider();
-          },
-          itemCount: _get.length),
+                  title: Text(dataUser[i].name),
+                  subtitle: Text(dataUser[i].phone),
+                );
+              },
+            ),
     );
   }
 }
