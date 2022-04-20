@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_)=>ContactViewModel())
+        ChangeNotifierProvider(create: (_)=> ContactViewModel(),)
       ],
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,
