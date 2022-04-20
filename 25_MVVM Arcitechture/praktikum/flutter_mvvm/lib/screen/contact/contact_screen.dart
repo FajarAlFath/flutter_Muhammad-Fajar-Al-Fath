@@ -14,7 +14,7 @@ class _ContactScreenState extends State<ContactScreen> {
   void didChangeDependencies() {
     super.didChangeDependencies();
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      Provider.of<ContactViewModel>(context, listen: false).getAll();
+      Provider.of<ContactViewModel>(context, listen: false).getAllContacts();
     });
   }
 
@@ -26,20 +26,20 @@ class _ContactScreenState extends State<ContactScreen> {
         title: const Text('Your Contact'),
       ),
       body: ListView.builder(
-          itemCount: model.contacts.length,
           itemBuilder: (context, i) {
             final contact = model.contacts[i];
             return ListTile(
-              leading: CircleAvatar(
-                child: Text(contact.name[i],
-                    style: const TextStyle(
+              leading: const CircleAvatar(
+                backgroundColor: Colors.green,
+                child: Text('A',
+                    style: TextStyle(
                         color: Colors.white, fontWeight: FontWeight.w300)),
               ),
               title: Text(contact.name),
               subtitle: Text(contact.phone),
             ); 
-          }
-          
+          },
+          itemCount: model.contacts.length,   
           ),
     );
   }
