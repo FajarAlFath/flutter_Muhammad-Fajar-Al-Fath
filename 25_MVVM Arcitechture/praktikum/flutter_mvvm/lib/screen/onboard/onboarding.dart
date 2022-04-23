@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:flutter_mvvm/screen/component/logo.dart';
 import 'package:flutter_mvvm/screen/contact/contact_screen.dart';
 
 class Homepage extends StatelessWidget {
@@ -18,25 +19,6 @@ class Homepage extends StatelessWidget {
                 TextStyle(color: Colors.white.withOpacity(0.7), fontSize: 15),
           )
         ],
-      ),
-    );
-  }
-
-  logo() {
-    return Container(
-      width: 120.0,
-      height: 120.0,
-      decoration: BoxDecoration(
-        borderRadius: const BorderRadius.all(Radius.circular(50.0)),
-        shape: BoxShape.rectangle,
-        color: Colors.white.withOpacity(0.8),
-      ),
-      child: const Padding(
-        padding: EdgeInsets.all(15.0),
-        child: Image(
-          image: AssetImage('assets/img/contact.png'),
-          fit: BoxFit.fitWidth,
-        ),
       ),
     );
   }
@@ -60,7 +42,7 @@ class Homepage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                logo(),
+                const Logo(),
                 Text(
                   'List Contact',
                   style: TextStyle(
