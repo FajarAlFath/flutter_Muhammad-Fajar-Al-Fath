@@ -1,6 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:flutter_mvvm/screen/contact/contact_screen.dart';
+import 'package:flutter_finit/screens/menu/menu_screen.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({Key? key}) : super(key: key);
@@ -34,7 +34,7 @@ class Homepage extends StatelessWidget {
       child: const Padding(
         padding: EdgeInsets.all(15.0),
         child: Image(
-          image: AssetImage('assets/img/contact.png'),
+          image: AssetImage('assets/bg.jpg'),
           fit: BoxFit.fitWidth,
         ),
       ),
@@ -50,7 +50,7 @@ class Homepage extends StatelessWidget {
         decoration: const BoxDecoration(
           shape: BoxShape.rectangle,
           image: DecorationImage(
-              image: AssetImage('assets/img/bg.png'), fit: BoxFit.cover),
+              image: AssetImage('assets/bg.jpg'), fit: BoxFit.cover),
         ),
         child: BackdropFilter(
           filter: ImageFilter.blur(sigmaX: 10, sigmaY: 18),
@@ -84,7 +84,7 @@ class Homepage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (BuildContext context) => const ContactScreen(),
+                      builder: (BuildContext context) => const MenuScreen(),
                     ),
                   );
                 }),
