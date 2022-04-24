@@ -34,7 +34,7 @@ class Homepage extends StatelessWidget {
       child: const Padding(
         padding: EdgeInsets.all(15.0),
         child: Image(
-          image: AssetImage('assets/bg.jpg'),
+          image: AssetImage('assets/dinner.png'),
           fit: BoxFit.fitWidth,
         ),
       ),
@@ -50,7 +50,7 @@ class Homepage extends StatelessWidget {
         decoration: const BoxDecoration(
           shape: BoxShape.rectangle,
           image: DecorationImage(
-              image: AssetImage('assets/bg.jpg'), fit: BoxFit.cover),
+              image: AssetImage('assets/bg.png'), fit: BoxFit.cover),
         ),
         child: BackdropFilter(
           filter: ImageFilter.blur(sigmaX: 10, sigmaY: 18),
@@ -62,19 +62,19 @@ class Homepage extends StatelessWidget {
               children: [
                 logo(),
                 Text(
-                  'List Contact',
+                  'List Menu',
                   style: TextStyle(
                       color: Colors.white.withOpacity(0.7), fontSize: 40),
                 ),
                 Column(
                   children: [
                     Text(
-                      'List Contact is a List views contact',
+                      'List Menu is Your list of Your Restauran Menu',
                       style: TextStyle(
                           color: Colors.white.withOpacity(0.7), fontSize: 18),
                     ),
                     Text(
-                      'You can see all your contacts',
+                      'You can see all your Menu',
                       style: TextStyle(
                           color: Colors.white.withOpacity(0.7), fontSize: 18),
                     ),
