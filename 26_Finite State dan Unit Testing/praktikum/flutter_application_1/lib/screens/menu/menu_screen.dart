@@ -40,7 +40,7 @@ class _MenuScreenState extends State<MenuScreen> {
 
   @override
   void initState() {
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) async {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
       var viewModel = Provider.of<MenuViewModel>(context, listen: false);
       await viewModel.getAllMenu();
     });
