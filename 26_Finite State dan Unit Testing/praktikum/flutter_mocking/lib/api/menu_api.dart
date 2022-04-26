@@ -3,7 +3,7 @@ import '../model/menu_model.dart';
 
 
 class MenuAPI {
-  static Future<List<Menu>> getMenu() async {
+  Future<List<Menu>> getMenu() async {
     final response = await Dio().get(
         'https://my-json-server.typicode.com/hadihammurabi/flutter-webservice/foods');
     List<Menu> menus = (response.data as List)
