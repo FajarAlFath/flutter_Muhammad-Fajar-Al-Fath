@@ -8,6 +8,11 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
+
+  Widget button(){
+    return const ButtonBar();
+  }
+
   bool pilihan = false;
   @override
   Widget build(BuildContext context) {
